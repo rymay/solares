@@ -17,11 +17,13 @@ login_model=auth_ns.model(
 class Login(Resource):
      @auth_ns.expect(login_model)
      def post(self):
+          
           data=request.get_json()
 
           usuario=data.get("usuario")
           contrasena=data.get("contrasena")
 
+          print(data.get("usuario"))
         
           db_user=Usuarios.query.filter_by(usuario=usuario).first()
 
