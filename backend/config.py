@@ -17,7 +17,7 @@ class ProdConfig(Config):
     pass
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI="sqlite:///dev.db"
+    SQLALCHEMY_DATABASE_URI="mssql+pymssql://sa:w1n0n4#69@10.10.10.201:1433/Solares"
     SQLALCHEMY_ECHO=False
-    TESTING=True
+    TESTING=False
     

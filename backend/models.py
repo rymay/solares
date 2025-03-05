@@ -34,8 +34,8 @@ class Solares(db.Model):
 
 class Usuarios(db.Model):
     id=db.Column(db.Integer, primary_key=True)
-    usuario=db.Column(db.String(), nullable=False)
-    contrasena=db.Column(db.String())
+    usuario=db.Column(db.String(), nullable=False, unique=True)
+    contrasena=db.Column(db.String(), nullable=False)
     NUsuario=db.Column(db.String())
     Delegacion=db.Column(db.String())
     SubDelegacion=db.Column(db.String())
